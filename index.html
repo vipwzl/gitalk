@@ -55,8 +55,9 @@ var gitalk = new Gitalk({
   clientSecret: '8fe68ef63afc5b8f6546ece8727eff849485e906',
   repo: 'comments',
   owner: 'vipwzl',
-  admin: 'vipwzl',
+  admin: ['vipwzl'],
   id: location.payhname,
+  distractionFreeMode: false  // Facebook-like distraction free mode
     })
  gitalk.render('gitalk-container');
   </script>
