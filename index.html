@@ -7,7 +7,7 @@
   margin:0 auto;
   padding:0;
 }
-.container {  
+.container,#gitalk-containe {  
     margin-bottom:20px;
     width:649px;
     display: grid;  
@@ -27,40 +27,26 @@
 }
 /* 移动端*/
 @media (max-width: 1000px) {
-.container {  
+.container,#gitalk-containe {  
     width:487px;
     grid-template-rows: repeat(49, 18px);  
 }
   }
 @media (max-width: 700px) {
-.container {  
+.container,#gitalk-containe {  
     width:433px;
     grid-template-rows: repeat(55, 18px);  
 }
   }
 @media (max-width: 500px) {
-.container {  
+.container,#gitalk-containe {  
     width:289px;
     grid-template-rows: repeat(83, 18px);  
 }
   }
-
-
     </style>
 <link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
 <script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
-<scipt>
-var gitalk = new Gitalk({
-  enable: true
-  clientID: 80a753d995154b33c47b
-  clientSecret: 8c3ead2563fb2330d78802bea200868c9ddf7ee6
-  repo: comments
-  owner: vipwzl
-  admin: Kingwei
-  id: location.payhname
-    })
- gitalk.render('gitalk-container')
-  </script>
   </head>
   <body>
     <div class="container">
@@ -1364,5 +1350,18 @@ var gitalk = new Gitalk({
     </div>
 
 <div id="gitalk-container"></div>
+    <scipt>
+var gitalk = new Gitalk({
+  clientID: '80a753d995154b33c47b', //clientID 
+  clientSecret: '8c3ead2563fb2330d78802bea200868c9ddf7ee6', //clientSecret
+  repo: 'comments'// 评论仓库名
+  owner: 'vipwzl'
+  admin:  ['vipwzl'],//管理人
+  id: location.pathname, // 返回当前 URL 的路径部分作为id
+  language:'zh-CN', //语言
+  distractionFreeMode: false  // 无干扰模式
+    })
+ gitalk.render('gitalk-container')
+  </script>
   </body>
 </html>
