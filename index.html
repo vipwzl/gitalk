@@ -1345,22 +1345,17 @@
 <div>	</div>
 <div>	</div>
 
-    </div>
-<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
-<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
-<div id="gitalk-container"></div>
-<script>
+    </div
 var gitalk = new Gitalk({
-  clientID: '6a4d96281c0b91e3e942', 
-  clientSecret: '7183d52b8edf3a309bf93571313816c8fdd30ee1',
-  repo: 'vipwzl.github.io',
-  owner: 'vipwzl',
-  admin:  ['vipwzl'],
-  id: location.pathname, 
-  language:'zh-CN', 
-  distractionFreeMode: true
-    })
- gitalk.render('gitalk-container')
-  </script>
+    id: '{{ page.url }}',
+    clientID: '{{ site.gitalk.clientID }}',
+    clientSecret: '{{ site.gitalk.clientSecret }}',
+    repo: '{{ site.gitalk.repo }}',
+    owner: '{{ site.gitalk.owner }}',
+    admin: ['{{ site.gitalk.owner }}'],
+    labels: ['gitment'],
+    perPage: 50,
+})
+
   </body>
 </html>
