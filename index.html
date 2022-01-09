@@ -1349,13 +1349,15 @@
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
+var clientId = 'a5eb136470be0da30ddb',
+var clientSecret = '7a8456f8fd19547996002647c8b649185c1529f4',
 var gitment = new Gitment({
-  id: 'gitment-introduction',
+  id: 'demo page',
   owner: 'vipwzl',
   repo: 'vipwzl.github.io',
   oauth: {
-    client_id: 'a5eb136470be0da30ddb',
-    client_secret: '7a8456f8fd19547996002647c8b649185c1529f4',
+        client_id: clientId,
+        client_secret: clientSecret,
   },
 })
 gitment.render('container')
