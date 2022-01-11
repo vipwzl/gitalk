@@ -1346,9 +1346,20 @@
 <div>	</div>
     </div
      <div id="container"></div>
-<a href="#SOHUCS" id="changyan_count_unit"></a>//评论数
-<a href="#SOHUCS" id="changyan_parti_unit"></a>//参与数
-<script type="text/javascript" src="http://assets.changyan.sohu.com/upload/plugins/plugins.count.js">
-</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    
+        <script type="text/javascript">
+      var gitalk = new Gitalk({
+        clientID: '5ff58bdeeff80e509b50',
+        clientSecret: 'f33491ae142adcc1fb60eba8364f781ffb1f93cd',
+        repo: 'gitalk',
+        owner: 'vipwzl',
+        admin: ['vipwzl'],
+        id: 'Demo',
+        distractionFreeMode: true
+      });
+      gitalk.render('gitalk-container');
+    </script>
   </body>
 </html>
